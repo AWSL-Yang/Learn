@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr 27 19:17:43 2020
+
+@author: A
+"""
+
+
+extra = [1000, 8000, 7500, 9500]
+wage = map(lambda x: x + 3000, extra)
+print(list(wage))
+
+
+def make(size, topping):
+    print(f'制作一个{size}寸的披萨需要的配料为：')
+    for i in topping:
+        print(i)
+
+
+size = input('请输入披萨的尺寸：  ')
+topping = ['黄油', '芝士', '虾仁']
+make(size, topping)
+
+
+def num_get(data):
+    for i in data:
+        print(i)
+    return
+
+
+num_get([1, 5, 6, 8, 11, 89, 45])
+
+
+def std_data(data):
+    ave = sum(data)/len(data)
+    sum_data = 0
+    for i in data:
+        sum_data += (i-ave)**2
+    return (sum_data/len(data))**(1/2)
+
+
+std_data([1, 5, 6, 8, 11, 89, 45])
+
+
+def mid(data):
+    data = data[::-1]
+    length = len(data)
+    if length % 2 == 0:
+        return (data[length//2] + data[length//2 - 1])/2
+    else:
+        return data[length//2]
+
+
+mid([1, 5, 6, 8, 11, 89, 45])
+
+
+def school(name, country, found_time):
+    info = {}
+    info['校名'] = name
+    info['国家'] = country
+    info['建校时间'] = found_time
+    return info
+
+
+school('OUC', 'China', 1924)
+
+
+def f(x):
+    if x < 5:
+        return x
+    elif x < 15:
+        return x + 6
+    elif x >= 15:
+        return x - 6
+    else:
+        return '请输入自然数'
+
+
+f(8)
+
+
+def isOdd(num):
+    if str(num).isdigit() is True:
+        return num % 2 == 1
+    else:
+        return False
+
+
+isOdd(4)
+isOdd(5)
+isOdd('bb')
+isOdd(1.3)
+
